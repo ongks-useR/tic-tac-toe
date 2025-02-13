@@ -1,0 +1,120 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&family=Jura:wght@300..700&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Pinyon+Script&family=Playwrite+VN:wght@100..400&family=Poiret+One&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Silkscreen:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#start {
+    cursor: pointer;
+}
+
+.container {
+    width: 70vw;
+    height: 80vh;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container > svg {
+    height: 50px;
+    width: 50px;
+    display: block;
+}
+
+#gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 70px);
+    grid-template-rows: repeat(3, 70px);
+    column-gap: 10px;
+    row-gap: 10px;
+
+    font-family: "Ubuntu", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+}
+
+#gameboard > .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+#gameboard > .box:hover {
+    border: 2px dotted lightseagreen;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+#score-board {
+    width: 100%;
+
+    display: flex;
+    
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+#player,
+#computer {
+    width: 50%;
+}
+
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.scores {
+    width: 50%;
+    height: 30px;
+    margin: 20px auto 0 auto;
+
+    display: flex;
+    column-gap: 5px;
+}
+
+#player > .scores > div {
+    padding: 4px 10px;
+    border-radius: 50%;
+    font-weight: 300;
+    color: white;
+    background-color: green;
+}
+
+#computer > .scores > div {
+    padding: 4px 10px;
+    border-radius: 50%;
+    font-weight: 400;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.514);
+}
+
+.profile svg {
+    height: 40px;
+    width: 40px;
+}
